@@ -1,0 +1,157 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "6186447591b0bf6bf5841d07ef487fb6",
+    "entities": [
+      {
+        "tableName": "market_tickers",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`symbol` TEXT NOT NULL, `price_change` TEXT NOT NULL, `price_change_percent` TEXT NOT NULL, `weighted_avg_price` TEXT NOT NULL, `prev_close_price` TEXT NOT NULL, `last_price` TEXT NOT NULL, `last_qty` TEXT NOT NULL, `bid_price` TEXT NOT NULL, `bid_qty` TEXT NOT NULL, `ask_price` TEXT NOT NULL, `ask_qty` TEXT NOT NULL, `open_price` TEXT NOT NULL, `high_price` TEXT NOT NULL, `low_price` TEXT NOT NULL, `volume` TEXT NOT NULL, `quote_volume` TEXT NOT NULL, `open_time` INTEGER NOT NULL, `close_time` INTEGER NOT NULL, `first_id` INTEGER NOT NULL, `last_id` INTEGER NOT NULL, `count` INTEGER NOT NULL, `last_updated_at` INTEGER NOT NULL, PRIMARY KEY(`symbol`))",
+        "fields": [
+          {
+            "fieldPath": "symbol",
+            "columnName": "symbol",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "priceChange",
+            "columnName": "price_change",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "priceChangePercent",
+            "columnName": "price_change_percent",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weightedAvgPrice",
+            "columnName": "weighted_avg_price",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prevClosePrice",
+            "columnName": "prev_close_price",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastPrice",
+            "columnName": "last_price",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastQty",
+            "columnName": "last_qty",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bidPrice",
+            "columnName": "bid_price",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bidQty",
+            "columnName": "bid_qty",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "askPrice",
+            "columnName": "ask_price",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "askQty",
+            "columnName": "ask_qty",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "openPrice",
+            "columnName": "open_price",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "highPrice",
+            "columnName": "high_price",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lowPrice",
+            "columnName": "low_price",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "volume",
+            "columnName": "volume",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quoteVolume",
+            "columnName": "quote_volume",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "openTime",
+            "columnName": "open_time",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "closeTime",
+            "columnName": "close_time",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstId",
+            "columnName": "first_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastId",
+            "columnName": "last_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "count",
+            "columnName": "count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastUpdatedAt",
+            "columnName": "last_updated_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "symbol"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6186447591b0bf6bf5841d07ef487fb6')"
+    ]
+  }
+}
